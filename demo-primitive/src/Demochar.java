@@ -1,3 +1,6 @@
+import java.math.BigDecimal;
+import java.math.BigInteger;
+
 public class Demochar {
 
   public static void main (String[] args) {
@@ -14,6 +17,13 @@ public class Demochar {
   String c9 = "好";
   System.out.println(c9);
    char c10 = 1; // char -> int
+
+   BigInteger BI = new BigInteger("99999999999999999999999999999");
+   BigDecimal B0 = new BigDecimal("0.000000000000000000000000001");
+
+   System.out.println(BI);
+   System.out.println(B0);
+  
   }
 
 

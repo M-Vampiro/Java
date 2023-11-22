@@ -84,10 +84,61 @@ public class Demostring {
 
     // String supports "+", "+="
 
-    str2+= str2;
-    
-    System.out.println(str2);
-        
+    // If, = , ==
+
+    int x = 0; // Assignment
+    int x2 = 3; // Assignment
+    if (x == x2) { // Means asking if they're equal
+    // "x == x2" returns is false, so the flow will not fall into this block
+    System.out.println("x is equals to x2");
+    } else {
+        System.out.println("x is not equals to x2");
+        // sysout is short cut for System.out.println()
+    }
+
+    // String is not a primitive, so you cannot use == to compare their values
+    String s5 = "hello";
+    String s6 = "hello";
+    if (s5.equals(s6)) { //comparing the string variables
+        System.out.println("s5 is equals to s6");
+    }
+    if ("hello".equals(s6)) { // comparing string value to a string variable
+        // if (s6.equals("hello")) // don't code in this way
+        System.out.println("s6 is hello");
+    }
+    if ("hello".equals("hello")) { // always ture
+    System.out.println("ABC");
+    }
+
+    // charAt()
+    // 4 is an index of String
+    // Example: "hello", h -> index = 0
+    // e -> index = 1
+    // l -> index = 2
+    // l -> index = 3
+    // o -> index = 4
+    //s5.charAt(4) return 'o'
+    char c1 = s5.charAt(4); //o
+    System.out.println(c1);
+
+    s5 = "Vampiro";
+    //what if we always get the last character of the String
+    //approach 1
+    int lastindex = s5.length() - 1;
+    c1 = s5.charAt(lastindex);
+    System.out.println(c1);
+    //approach 2
+    c1 = s5.charAt(s5.length() - 1) ;
+    System.out.println(c1);
+    // This is pratice down below
+
+    int I = 30;
+
+    String T = "Today's temperture is ";
+
+    char Unit = 'C';
+
+    System.out.println(T + I + Unit);
 
     
     }
