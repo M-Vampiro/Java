@@ -79,7 +79,7 @@ public class Conditions {
         System.out.println("Your grade is " + grade);
 
         // switch: single value comparison
-        char grade = 'B';
+     grade = 'B';
         switch (grade) {
             case 'A':
                 System.out.println("grade=A");
