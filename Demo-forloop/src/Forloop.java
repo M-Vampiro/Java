@@ -122,10 +122,11 @@ System.out.println("Total sum is " + total);
 // break -> Exit the loop directly
 // sum up all odd number (0-100)
 // i) sum <= 200
-// The loop should be ended at which number??
+// Which loop should be ended at which number??
 
 int sum4 = 0;
 int finalsum = 0;
+int finali= 0;
 for (int i = 0 ; i < 101 ; i++) {
     if ( i % 2 == 0 ) {
         continue;
@@ -134,9 +135,66 @@ for (int i = 0 ; i < 101 ; i++) {
     if ( sum4 > 200) {
         break;
     }
+    finali = i;
     finalsum = sum4;
-}   System.out.println( "The final sum smaller than 200 is " + finalsum);
+}   System.out.println( "The final sum smaller than 200 is " + finalsum +", with "+ finali + " cycles.");
+
+// Question : Determine whether year n is a leap year
+/* definition of a leap year
+ * If a year is divisible by 4 and not divisible by 100 or divisible by 400,
+ * then it's a leap year
+ */
+
+int year = 2000;
+ 
+ if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+    System.out.println("Year " + year + " is a leap year!");
+}
+ else {
+    System.out.println("Year " + year + " is not a leap year!");}
+
+String searchMe = "peter piper picked a peck of picked pepper";
+
+int num = 0;
+
+for (int i = 0; i < searchMe.length() ; i++ ) {
+    if (searchMe.charAt(i) != 'p') {
+        continue;
+    }
+    num++;
+}
+System.out.println("Found " + num + " p is in the string");
+
+
+
+
+String str = "abc pol ijk def xyz";
+
+int num1 = 0;
+char target = 'f';
+for (int i = 0; i < str.length() ; i++ ) {
+    if (str.charAt(i) != target) {
+        num1++;} 
+        else {
+        break;
+    }
+}
+
+if (num1 > 0) {
+System.out.println("The letter 'f' is in the position " + num1 + " of the sentence.");
+} else {
+System.out.println("The letter 'f' was not found in the sentence.");
 
 }
+
+
+
+
     }
+
+
+
+  
+}
+    
 
