@@ -22,7 +22,7 @@ System.out.println("Turn it ");
 //     break;
    // }
 }
-int Factor = 15;
+int Factor = 10;
 System.out.println("      Muitiplier Table:");
 System.out.println();
 for ( int v = 1 ; v < Factor + 1 ; v++ ) { 

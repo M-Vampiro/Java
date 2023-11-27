@@ -39,6 +39,25 @@ int b = 100;
 b = 1000;
 System.out.println(b);
 
+// default value of int[]
+int [] arr5 = new int[5];
+for ( int i = 0 ; i < arr5.length ; i++) {
+    // arr5 is storing the address of the array object.
+    // we use arr[5] find out the 3 values stored in the array object
+    System.out.println("arr[i] = " + arr5[i]);
+
+    String str = "hello";
+    String str2 = new String("hello"); // str2 is storing the address of String
+    String str3 = String.valueOf("hello");//
+
+    for 
+
+
+
+
+
+} 
+
 
 
 
