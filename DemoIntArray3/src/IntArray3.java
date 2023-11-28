@@ -36,6 +36,75 @@ System.out.println(Arrays.toString(arr));
 
         System.out.println(Arrays.toString(arr2));
 
+        // Find max value, and move to the tail
+
+        int[] arr3 = new int[] {100 , 4 , 1050 , 500 , -20};
+        int r3 = 0;
+        int temp = 0; 
+        int max = 0;
+        for ( int i = 0 ; i < arr3.length ; i++ )
+        if (arr3[i] > max) {
+            max = arr3[i];
+            r3 = i;
+            }
+            System.out.println("The max value is " + max + " and the position is " + r3);
+
+
+        for ( int i = 0 ; i < arr3.length - r3 - 1 ; i++ ) {
+            if (arr3[i + r3] != 0) {
+                temp = arr3[i + r3];
+                arr3 [i + r3] = arr3 [i + r3 + 1];
+                arr3 [i + r3 + 1] = temp;
+            }
+        }
+            System.out.println("The final array will be " + Arrays.toString(arr3) );
+
+            
+            int temp2 = 0;
+
+            int[] arr4 = new int[] {100 , 4 , 1050 , 500 , -20};
+        
+            for ( int i = 0 ; i < arr4.length - 1 ; i ++ ) {
+                for ( int j = 0 ; j < arr4.length - 1 ; j++) {
+                    if  ( arr4[j] > arr4[j + 1]) {
+                        temp2 = arr4[j];
+                        arr4[j] = arr4[j + 1];
+                        arr4[j + 1] = temp2;
+                    }
+                    }
+                    }
+      System.out.println("The final array4 will be " + Arrays.toString(arr4) );
+           
+
+
+
+
+        // Insertion Array sorting
+        int temp3 = 0;
+        int[] arr5 = new int[] {100, -30, 40, 22, 44} ;
+        for ( int j = 0 ; j < arr5.length ; j++) {
+        for ( int i = 0 ; i < arr5.length - 1; i++) {
+            if (arr5[i] > arr5[i + 1]) {
+                temp3 = arr5[i];
+                arr5[i] = arr5 [i + 1];
+                arr5 [i + 1] = temp3; 
+            }}
+        } 
+        System.out.println(Arrays.toString(arr5));
+
+
+        // Reversion Array sorting
+        int temp4 = 0;
+        int[] arr6 = new int[] {100, -30, 40, 22, 44} ;
+        for ( int j = arr6.length - 1 ; j > 0 ; j--) {
+        for ( int i = arr6.length - 1 ; i > 0; i--) {
+            if (arr6[i - 1] < arr6[i]) {
+                temp4 = arr6[i - 1];
+                arr6[i - 1] = arr6[i];
+                arr6[i] = temp4; 
+            }}
+        } 
+        System.out.println(Arrays.toString(arr6));
 
 
 
