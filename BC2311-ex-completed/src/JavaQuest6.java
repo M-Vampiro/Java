@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class JavaQuest6 {
   /**
@@ -12,13 +13,16 @@ public class JavaQuest6 {
     int x1 = 0;
     int x2 = 1;
     int e = 0;
+    int[] arr = new int[15];
     for ( int i = 0 ; i < 15; i++ ) {
      x1 = x2;
      x2 = e;
      e = x1 + x2;
+     arr[i] = e;
      System.out.print(" " + e);
     }
-
+    System.out.println();
+    System.out.println(Arrays.toString(arr));
 
 
 
