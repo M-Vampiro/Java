@@ -106,8 +106,51 @@ System.out.println(Arrays.toString(arr));
         } 
         System.out.println(Arrays.toString(arr6));
 
+        
+        String s = "abcabcabcabcabc";
+        char[] arr7 = new char[s.length()];
 
+       // Approach 1
+     
+        for ( int i = 0 ; i < s.length() ; i++ ) { 
+            //chatAt
+            arr7[i] = s.charAt(i);
+        }
 
+        // Approach 2
+        
+        char[] arr8 = s.toCharArray(); //
+
+        // replace a -> c
+        // "cbccbccbccbccbc"
+        int asciicode = 0;
+        for ( int i = 0 ; i < s.length() ; i++ ) {
+            if ( (int) s.charAt(i) == 'a') {
+               asciicode = (int) s.charAt(i)  + 2;
+               arr8[i] = (char) asciicode;
+               continue;
+            } 
+            arr8[i] = s.charAt(i);
+        } System.out.println(Arrays.toString(arr8));
+
+        String str = "hello";
+        str = new String("hello");
+        str = String.valueOf("hello");
+
+        System.out.println(String.valueOf(1));
+        System.out.println(String.valueOf(1.0d));
+        System.out.println(String.valueOf(1.0f));
+        System.out.println(String.valueOf(1L));
+        System.out.println(String.valueOf(new char[] {'a' , 'b'})); //ab
+        //System.out.println(String.valueOf(new int [] {1,2,3})); // NOT ok
+
+        // Replace (String method)
+        String str4 = "abcabcabcabcabc";
+        String result4 = str4.replace('a', 'c'); //replace a by c
+        System.out.println("result4 = " + result4); //result 4 = cbccbccbccbccbc
+        System.out.println("str4 =" + str4);
+
+        System.out.println(str4.replace("ab" , "ij")); //ijcijcijcijcijc
 
 
     }
