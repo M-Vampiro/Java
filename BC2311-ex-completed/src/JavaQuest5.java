@@ -28,10 +28,10 @@ for ( int i = 0 ; i < str.length() ; i++ ) {
     // if not found, print "Not Found."
     // code here
 if (target1count > 0) {
-  System.out.println("We found " + target1count + " character c in the String.");
+  System.out.println("We found " + target1count + " character " + target + " in the String.");
 } else System.out.println("Not Found.");
 if (target2count > 0) {
-  System.out.println("We found " + target2count + " character z in the String.");
+  System.out.println("We found " + target2count + " character " + target2 + " in the String.");
 } else System.out.println("Not Found.");
 
 
