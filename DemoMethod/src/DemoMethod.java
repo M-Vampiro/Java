@@ -69,6 +69,8 @@ public class DemoMethod {
 
 
 
+
+
     }
 
     // Method name; sum
@@ -143,20 +145,57 @@ public class DemoMethod {
             s += arr [i];
         }
         return s;
-        }
+    }
 
+
+
+        public static void sound( String animal) {
+            // if ((ABC").equals(animal)) {
+
+                // ... return
+                // }
+
+                // Early return
+        if (!"Dog".equals(animal) || !"Cat".equals(animal)) { 
+            return;
+        }
+            if ("Dog".equals(animal)) {
+                System.out.println("wo wo");
+            } else if ("Cat".equals(animal)) {
+                System.out.println("meow");
+                
+            }
+            System.out.println( "Default sound..");
+            }
+
+
+        public static String sound2(String animal) {
+            // code here 
+            if ( "Tiger".equals(animal)) {
+                System.out.println("Tiger sound");
+            } else if ( "Eagle".equals(animal))
+            { System.out.println("Eagle Sound");}
+            
+            return " Default Sound ... ";
+
+        } 
+
+
+        public static void notifyCustomer() {
+            if (sendEmail()) {
+                return;
+            }
+            sendSMS();
+        }
+        public static boolean sendEmail() {
+            return false;
+        }
+        public static boolean sendSMS() {
+            return false;
 
     }
-    
+
+        public static boolean main "notifyCustomss"
 
 
-
-
-
-
-    
-
-
-
-
-
+        
