@@ -32,8 +32,8 @@ public class JavaQuest12 {
   // target
     public static int[] twoSum(int[] dataset , int target) {
     int[] resultIdx = new int[2];  
-    for ( int i = 0 ; i < dataset.length; i++ ) {
-      for ( int j = i ; j < dataset.length ; j++ ) {
+    for ( int i = 0 ; i < dataset.length -1 ; i++ ) {
+      for ( int j = i + 1 ; j < dataset.length ; j++ ) {
         if (dataset[i] + dataset[j] == target) {
           resultIdx[0] = i;
           resultIdx[1] = j;
