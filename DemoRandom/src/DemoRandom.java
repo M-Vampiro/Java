@@ -54,12 +54,7 @@ public class DemoRandom {
         }
         if (chance == 0) {
              System.out.println("You lose !!!");
-             System.out.println("You lose !!!");
-             System.out.println("You lose !!!");
-
         } else {
-             System.out.println("You win !!!");
-             System.out.println("You win !!!");
              System.out.println("You win !!!");
         }
 
