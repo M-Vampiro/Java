@@ -39,8 +39,7 @@ public class JavaQuest14 {
   // false
   public static boolean palindrome(int num) {
     // code here ...
-    String str = String.valueOf(num);
-    char[] charArray = str.toCharArray();
+    char[] charArray = String.valueOf(num).toCharArray();
     int count = charArray.length % 2 == 0 ? charArray.length / 2 : charArray.length / 2 + 1;
     for (int i = 0 ; i < count ; i++) {
       if (charArray[i] != charArray[charArray.length - 1 - i]) {
