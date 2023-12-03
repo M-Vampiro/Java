@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class StringMethods {
     public static void main(String[] args) {
     
@@ -110,6 +112,11 @@ System.out.println(result);
 
 String result4 = s5.toUpperCase().substring( 1 , 2).concat("ijk");
 System.out.println( result4);
+
+String str2 = "abc,def,fgh,jkl";
+String[] arr2 = new String[] {};
+arr2 = str2.split(","); 
+System.out.println(Arrays.toString(arr2));
 
 
 
