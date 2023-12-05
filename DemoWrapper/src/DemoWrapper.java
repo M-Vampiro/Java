@@ -46,13 +46,6 @@ public class DemoWrapper {
         Integer i10 = (int) (long) l1; // int -> Integer (autobox)
         Long l2 = (long) (int) i10; // long -> Long (autobox)
 
-        
-        
-        
-
-
-
-
 
 
 

@@ -49,6 +49,15 @@ public class DemoLoop2 {
         System.out.println(reverse2("123456789"));
         System.out.println(reverse3("123456789"));
 
+        int x = 123456789;
+        int r = 0;
+        while (x > 0) {
+            r = r * 10 + x % 10;
+            x = x / 10;
+
+            System.out.println(r);
+        }
+
     }
 
     public static String evenIndex(String s) {
@@ -92,9 +101,9 @@ public class DemoLoop2 {
 
     public static String reverse3(String s) {
         String result = "";
-        for (int i = s.length() - 1 ; i >= 0 ; i--) {
-                result = result.concat(s.substring(i, i + 1));
-            
+        for (int i = s.length() - 1; i >= 0; i--) {
+            result = result.concat(s.substring(i, i + 1));
+
         }
         return result;
 
