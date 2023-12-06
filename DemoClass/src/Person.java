@@ -5,6 +5,7 @@ public class Person {
     private String firstName;
     private String lastName;
     private int age; // 0
+    // Cannot use keywords as Attributes
 
     // Constructor (Produce Person's Obj.)
     public Person() {
@@ -22,8 +23,18 @@ public class Person {
         this.firstName = String.valueOf(x.charAt(0)).toUpperCase().concat(x.substring(1, x.length()));
     }
 
-    // instance Method (Obj. Method)
+    // Instance Method (Obj. Method)
+    // 1. Belongs to the Obj. (Person p1 = new Person(); p1.swim();)
+    // 2. Able to control the instance variable by "this"
+
+    // Static Method
+    // 1. Belongs to the class (ClassName.Static Method() -> Person.swim();)
+    // 2. Not able to read/ write instance variable
+    // 3. The return value completely derived by the input parameters.
+
+
     // Setter
+    
     public void setfirstName(String x) {
         this.firstName = String.valueOf(x.charAt(0)).toUpperCase().concat(x.substring(1, x.length()));
     }

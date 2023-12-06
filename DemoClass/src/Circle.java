@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 public class Circle {
@@ -24,10 +25,25 @@ public class Circle {
     // Math library
     return Math.pow(this.radius, 2) * Math.PI;
   }
+// Static Method - Tool
+  public static double area( double radius) {
+    // return radius * radius * Math.PI // how to fix by BigDecimal??
+    BigDecimal r = BigDecimal.valueOf(radius);
+    BigDecimal pi = BigDecimal.valueOf(Math.PI);
+    return r.multiply(r).multiply(pi).doubleValue();
+  }
+
+
+
+
 // Setter
   public void setRadius(double radius) {
     this.radius = radius;
-  }
+
+}
+
+
+  
 // main - new a circle
 
 public static void main (String[] args) {
@@ -47,6 +63,9 @@ public static void main (String[] args) {
   double area2 = circle2.area();
   System.out.println("Circle 2 diameter = " + diameter2);
   System.out.println("Circle 2 area = " + df.format(area2));
+
+  
+
 }
 
 
