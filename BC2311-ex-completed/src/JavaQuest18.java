@@ -27,6 +27,7 @@ public class JavaQuest18 {
     StringBuilder sb = new StringBuilder(s);
     int i = 0;
     while (sb.charAt(i) == sb.charAt(sb.length() - 1 - i)) {
+      i++;
       if (i == sb.length() / 2) {
         return true;
       }
@@ -38,13 +39,11 @@ public class JavaQuest18 {
     // hints : finish the logic by using isPalindrome() , for-loop , if-else
     for (int i = 0; i < words.length; i++) {
       int count = 0;
-      String result = "";
       StringBuilder sb = new StringBuilder(words[i]);
       while (sb.charAt(count) == sb.charAt(sb.length() - 1 - count)) {
-        result = sb.toString();
         count++;
         if (count == sb.length() / 2) {
-          return result;
+          return sb.toString();
         }
       }
     }
