@@ -47,6 +47,6 @@ public class JavaQuest18 {
         }
       }
     }
-    return "";
+    return "No Palindrome word in String Array.";
   }
 }
