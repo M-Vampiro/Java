@@ -28,17 +28,17 @@ public class JavaQuest17 {
   // Hints : int -> String -> array
   public static int minimum35Number(int num) {
     int count = 0;
-    char[] c = Integer.toString(num).toCharArray();
-    for (int i = 0; i < c.length; i++) {
-      if (c[i] == '5') {
+    StringBuilder sb = new StringBuilder(String.valueOf(num));
+    for (int i = 0; i < sb.length(); i++) {
+      if (sb.charAt(i) == '5') {
+        sb.setCharAt(i, '3');
         count++;
-        c[i] = '3';
       }
       if (count == 2) {
         break;
       }
     }
-    return Integer.parseInt(new String(c));
+    return Integer.parseInt(sb.toString());
 
   }
 }

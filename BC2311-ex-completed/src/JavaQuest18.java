@@ -36,14 +36,14 @@ public class JavaQuest18 {
 
   public static String firstPalindrome(String[] words) {
     // hints : finish the logic by using isPalindrome() , for-loop , if-else
+    int count = 0;
     for (int i = 0; i < words.length; i++) {
-      char[] charArray = words[i].toCharArray();
-      int count = charArray.length % 2 == 0 ? charArray.length / 2 : charArray.length / 2 + 1;
-      for (int j = 0; j < count; j++) {
-        if (charArray[j] != charArray[charArray.length - 1 - j]) {
+      StringBuilder sb = new StringBuilder(words[i]);
+      while (count <= sb.length() / 2) {
+        if (sb.charAt(i) != sb.charAt(sb.length() - 1 - i)) {
           break;
         }
-        return String.copyValueOf(charArray);
+        return sb.toString();
       }
     }
     return "";
