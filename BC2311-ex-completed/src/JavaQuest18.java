@@ -24,26 +24,28 @@ public class JavaQuest18 {
   private static boolean isPalindrome(String s) {
     // hints : if a String is Palindrome , return true
     //
-    char[] charArray = s.toCharArray();
-    int count = charArray.length % 2 == 0 ? charArray.length / 2 : charArray.length / 2 + 1;
-    for (int i = 0; i < count; i++) {
-      if (charArray[i] != charArray[charArray.length - 1 - i]) {
-        return false;
+    StringBuilder sb = new StringBuilder(s);
+    int i = 0;
+    while (sb.charAt(i) == sb.charAt(sb.length() - 1 - i)) {
+      if (i == sb.length() / 2) {
+        return true;
       }
     }
-    return true;
+    return false;
   }
 
   public static String firstPalindrome(String[] words) {
     // hints : finish the logic by using isPalindrome() , for-loop , if-else
-    int count = 0;
     for (int i = 0; i < words.length; i++) {
+      int count = 0;
+      String result = "";
       StringBuilder sb = new StringBuilder(words[i]);
-      while (count <= sb.length() / 2) {
-        if (sb.charAt(i) != sb.charAt(sb.length() - 1 - i)) {
-          break;
+      while (sb.charAt(count) == sb.charAt(sb.length() - 1 - count)) {
+        result = sb.toString();
+        count++;
+        if (count == sb.length() / 2) {
+          return result;
         }
-        return sb.toString();
       }
     }
     return "";
