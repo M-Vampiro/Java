@@ -138,5 +138,8 @@ public class StringMethods {
         total += n[n.length - 1];
         System.out.println(total);
 
+
+        char[] arr = String.valueOf(12345).toCharArray()
+
     }
 }
