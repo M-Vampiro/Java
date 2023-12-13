@@ -1,3 +1,5 @@
+package Weapons;
+
 public class MeleeWeapons extends Armory {
   // Attributes
 

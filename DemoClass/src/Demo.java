@@ -1,3 +1,5 @@
+import Inheritance.Cat;
+
 public class Demo {
 
 

@@ -139,7 +139,7 @@ public class StringMethods {
         System.out.println(total);
 
 
-        char[] arr = String.valueOf(12345).toCharArray()
+        
 
     }
 }

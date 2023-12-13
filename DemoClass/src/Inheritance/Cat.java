@@ -1,3 +1,4 @@
+package Inheritance;
 public class Cat {
 private String name;
   // If there is no constructor explicitly in a class\

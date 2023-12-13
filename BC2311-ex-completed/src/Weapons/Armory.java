@@ -1,3 +1,5 @@
+package Weapons;
+
 public class Armory {
   public String catagory;
 
@@ -12,6 +14,12 @@ public class Armory {
   public double attackRps;
 
   public boolean extendedMag;
+
+  public int durabillity;
+
+  public int ammoInMag;
+
+  public int ammoBackup;
 
   // Super Constructor
   public Armory() {
@@ -31,11 +39,8 @@ public class Armory {
   }
 
   public void setmagSize(int magSize) {
-    if (extendedMag && this.catagory == "Pistol") {
-      this.magSize = magSize + 16;
-    } else if (this.catagory == "Rifle") {
-    this.magSize = magSize + 10;
-    } else this.magSize = magSize;
+    this.magSize = magSize;
+    this.ammoInMag = this.magSize;
   }
 
   public void setRadius(double radius) {
@@ -45,9 +50,6 @@ public class Armory {
   public void setattackRps(double attackRps) {
     this.attackRps = attackRps;
   }
-  public void setExtendedMag(boolean extendedMag) {
-    this.extendedMag = extendedMag;
-  } 
 
   public String getName() {
     return this.name;
@@ -76,4 +78,19 @@ public class Armory {
   public boolean getExtendMag() {
     return this.extendedMag;
   }
+
+  public int getammoBackup() {
+    return this.ammoBackup;
+  }
+
+  public String getDetails() {
+    return "Weapon catagory: " + this.catagory + ". Name: " + this.name + ". Ammo: "
+        + this.ammoType + ". Mag Size: " + this.magSize + ". Durabillity: " + this.durabillity + ".";
+  }
+
+  public String getStatus() {
+    return "Weapon: " + this.name + ". Ammo in magazine: " + this.ammoInMag + ". Ammo backup : " + this.ammoBackup
+        + ". Durabillity: " + this.durabillity + ".";
+  }
+
 }

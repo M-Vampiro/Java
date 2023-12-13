@@ -195,7 +195,8 @@ public class DemoMethod {
 
     }
 
-        public static boolean main "notifyCustomss"
+    
+    }
 
 
         

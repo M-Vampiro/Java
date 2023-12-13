@@ -1,3 +1,4 @@
+package Inheritance;
 public class Dog {
 
   public static int sum(int... integer) {
