@@ -2,11 +2,12 @@ package Weapons;
 
 public class Firearms extends Armory implements Attack, Ammo {
   // Attributes
+  int MAX_DURABILLITY = 100;
 
   // Empty constructor
   public Firearms() {
     this.extendedMag = false;
-    this.durabillity = 100;
+    this.durabillity = MAX_DURABILLITY;
     this.ammoBackup = 0;
   }
 
@@ -18,7 +19,7 @@ public class Firearms extends Armory implements Attack, Ammo {
     this.magSize = magSize;
     this.attackRps = attackRps;
     this.extendedMag = false;
-    this.durabillity = 100;
+    this.durabillity = MAX_DURABILLITY;
     this.ammoInMag = this.magSize;
     this.ammoBackup = 0;
   }
@@ -42,8 +43,8 @@ public class Firearms extends Armory implements Attack, Ammo {
 
   @Override
   public boolean restore() {
-    if (this.durabillity != 100) {
-      this.durabillity = 100;
+    if (this.durabillity != MAX_DURABILLITY) {
+      this.durabillity = MAX_DURABILLITY;
       return true;
     }
     return false;

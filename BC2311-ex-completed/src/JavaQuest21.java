@@ -6,6 +6,7 @@ Otherwise, return false.
 An integer m is a divisor of n if there exists an integer k such that n = k * m.
 
 */
+
 public class JavaQuest21 {
   public static void main(String[] args) {
     System.out.println(isThreeDivisors(1)); // false
@@ -16,7 +17,10 @@ public class JavaQuest21 {
 
   }
 
-  public boolean isThreeDivisors(int n) {
+  public static boolean isThreeDivisors(int n) {
     // finish the code
+    if(Math.sqrt(n) % 1 == 0 && n != 1) {
+      return true;
+    } return false;
   }
 }

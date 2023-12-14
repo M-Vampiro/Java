@@ -31,7 +31,15 @@ public class JavaQuest22 {
     // code here
     int sum = 0;
     int times = 0;
-    int[] arr = new int[] {}
-    for ( int i = 0 ; i < 
+    char[] arr = String.valueOf(n).toCharArray();
+    for (int i = 1; i < arr.length; i++) {
+      if (i == 1) {
+        times = Integer.valueOf(arr[0]) - 48;
+        sum = Integer.valueOf(arr[0]) - 48;
+      }
+      times *= (Integer.valueOf(arr[i]) - 48);
+      sum += (Integer.valueOf(arr[i]) - 48);
+    }
+    return times - sum;
   }
 }
