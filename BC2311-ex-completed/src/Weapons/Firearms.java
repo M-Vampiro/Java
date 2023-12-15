@@ -1,6 +1,8 @@
 package Weapons;
 
-public class Firearms extends Armory implements Attack, Ammo {
+import java.util.Objects;
+
+public class Firearms extends Armory implements Attack, AmmoFunc {
   // Attributes
   int MAX_DURABILLITY = 100;
 
@@ -12,7 +14,7 @@ public class Firearms extends Armory implements Attack, Ammo {
   }
 
   // Argument constructor
-  public Firearms(String catagory, String name, String ammo, int magSize, double attackRps) {
+  public Firearms(Catagory catagory, String name, Ammo ammo, int magSize, double attackRps) {
     this.catagory = catagory;
     this.name = name;
     this.ammoType = ammo;
@@ -60,9 +62,9 @@ public class Firearms extends Armory implements Attack, Ammo {
 
   @Override
   public void useExtendedMag() {
-    if (!isExtendMag() && this.catagory == "Pistol") {
+    if (!isExtendMag() && this.catagory == Catagory.Pistol) {
       this.magSize = magSize + 16;
-    } else if (!isExtendMag() && this.catagory == "Rifle") {
+    } else if (!isExtendMag() && this.catagory == Catagory.Rifle) {
       this.magSize = magSize + 10;
     }
 
@@ -94,9 +96,10 @@ public class Firearms extends Armory implements Attack, Ammo {
       this.ammoBackup -= (this.magSize - this.ammoInMag);
       this.ammoInMag = this.magSize;
       return true;
-    } else if (this.ammoInMag < this.magSize && this.ammoBackup < magSize) {
+    } else if (this.ammoInMag < this.magSize && this.ammoBackup < magSize && this.ammoBackup != 0) {
       this.ammoInMag += this.ammoBackup;
       this.ammoBackup = 0;
+      return true;
     }
     return false;
   }
@@ -113,41 +116,42 @@ public class Firearms extends Armory implements Attack, Ammo {
   @Override
   public void rapidFire() {
     attack(3);
+  }
 
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    } else if (!(obj instanceof Firearms)) {
+      return false;
+    }
+    Firearms firearms = (Firearms) obj;
+    return Objects.equals(firearms.getCatagory(), this.catagory)
+        && Objects.equals(firearms.getName(), this.name)
+        && Objects.equals(firearms.getammoType(), this.ammoType.getAmmo())
+        && Objects.equals(firearms.getmagSize(), this.magSize)
+        && Objects.equals(firearms.getattackRps(), this.attackRps);
+  }
+
+  public int hashCode() {
+    return Objects.hash(this.catagory, this.name, this.ammoType, this.magSize, this.attackRps);
   }
 
   public static void main(String[] args) {
     Firearms f1 = new Firearms();
-    f1.setCatagory("SMG");
+    f1.setCatagory(Catagory.SMG);
     f1.setName("MP5");
-    f1.setammoType("9mm");
+    f1.setammoType(Ammo.P9);
     f1.setmagSize(30);
-    System.out.println(f1.getCatagory());
-    System.out.println(f1.getName());
-    System.out.println(f1.getammoType());
-    System.out.println(f1.getmagSize());
     Firearms f2 = new Firearms();
-    f2.setCatagory("Pistol");
+    f2.setCatagory(Catagory.Pistol);
     f2.setName("Glock 18");
-    f2.setammoType("9mm");
+    f2.setammoType(Ammo.P9);
     f2.setmagSize(17);
     f2.useExtendedMag();
-    System.out.println(f2.getCatagory());
-    System.out.println(f2.getName());
-    System.out.println(f2.getammoType());
-    System.out.println(f2.getmagSize());
-    System.out.println(f2.getExtendMag());
-    Firearms f3 = new Firearms("Rifle", "M4A1", "5.56mm", 30, 5.0);
-    System.out.println(f3.getCatagory());
-    System.out.println(f3.getName());
-    System.out.println(f3.getammoType());
-    System.out.println(f3.getmagSize());
-    Firearms f4 = new Firearms("Rifle", "AK47", "7.62mm", 30, 3.5);
-    System.out.println(f4.getCatagory());
-    System.out.println(f4.getName());
-    System.out.println(f4.getammoType());
-    System.out.println(f4.getmagSize());
-
+    Firearms f3 = new Firearms(Catagory.Rifle, "M4A1", Ammo.R556, 30, 5.0);
+    Firearms f4 = new Firearms(Catagory.Rifle, "AK47", Ammo.R762, 30, 3.5);
+    
     System.out.println(f1.getDetails());
     System.out.println(f2.getDetails());
     System.out.println(f3.getDetails());
@@ -156,7 +160,7 @@ public class Firearms extends Armory implements Attack, Ammo {
     f1.rapidFire(); // test if rapidFire works
     System.out.println(f1.getStatus());
     System.out.println("Reload: " + f1.reload());
-    f1.reload();  // test if reload works
+    f1.reload(); // test if reload works
     System.out.println(f1.getStatus());
     f1.buyAmmo(); // test if buyAmmo works
     System.out.println("Reload: " + f1.reload());

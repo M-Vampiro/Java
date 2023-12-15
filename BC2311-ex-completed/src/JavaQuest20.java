@@ -18,9 +18,6 @@ public class JavaQuest20 {
   }
 
   public static boolean rotateString(String s, String goal) {
-    String str = s.concat(s);
-    if (str.contains(goal)) {
-      return true;
-    } return false;
+    return s.concat(s).contains(goal);
   }
 }

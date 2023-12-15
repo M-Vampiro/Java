@@ -1,11 +1,11 @@
 package Weapons;
 
 public class Armory {
-  public String catagory;
+  public Catagory catagory;
 
   public String name;
 
-  public String ammoType;
+  public Ammo ammoType;
 
   public int magSize;
 
@@ -26,7 +26,7 @@ public class Armory {
 
   }
 
-  public void setCatagory(String catagory) {
+  public void setCatagory(Catagory catagory) {
     this.catagory = catagory;
   }
 
@@ -34,7 +34,7 @@ public class Armory {
     this.name = name;
   }
 
-  public void setammoType(String ammo) {
+  public void setammoType(Ammo ammo) {
     this.ammoType = ammo;
   }
 
@@ -55,12 +55,12 @@ public class Armory {
     return this.name;
   }
 
-  public String getCatagory() {
+  public Catagory getCatagory() {
     return this.catagory;
   }
 
   public String getammoType() {
-    return this.ammoType;
+    return this.ammoType.getAmmo();
   }
 
   public int getmagSize() {
@@ -84,13 +84,17 @@ public class Armory {
   }
 
   public String getDetails() {
+    if (this instanceof Firearms) {
     return "Weapon catagory: " + this.catagory + ". Name: " + this.name + ". Ammo: "
-        + this.ammoType + ". Mag Size: " + this.magSize + ". Durabillity: " + this.durabillity + ".";
-  }
+        + this.ammoType.getAmmo() + ". Mag Size: " + this.magSize + ". Durabillity: " + this.durabillity + ".";
+  } else return "";
+}
 
   public String getStatus() {
+    if (this instanceof Firearms) {
     return "Weapon: " + this.name + ". Ammo in magazine: " + this.ammoInMag + ". Ammo backup : " + this.ammoBackup
         + ". Durabillity: " + this.durabillity + ".";
-  }
+  } else return "";
+}
 
 }

@@ -1,15 +1,25 @@
 package Weapons;
 
-public interface Ammo {
+public enum Ammo {
+   P9("9mm"),
+   P45(".45 ACP"),
+   R762("5.56mm"),
+   R556("7.62mm"),;
 
-  boolean buyAmmo();
 
-  boolean reload();
 
-  boolean isExtendMag();
 
-  void useExtendedMag();
+   private String ammo;
 
-  boolean magisEmpty();
+   private Ammo(String ammo) {
+    this.ammo = ammo;
+   }
+
+   public String getAmmo() {
+    return this.ammo;
+   }
+   
+
+
 
 }
