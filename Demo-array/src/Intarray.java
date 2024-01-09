@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Intarray {
     public static void main(String[] args) {
        
@@ -50,7 +54,15 @@ for ( int i = 0 ; i < arr5.length ; i++) {
     String str2 = new String("hello"); // str2 is storing the address of String
     String str3 = String.valueOf("hello");//
 
-    for 
+ List<String> strs = new ArrayList<>(List.of("one.two.three","four.five","six"));
+ System.out.println();
+
+ String[] strr = strs.toArray(new String[strs.size()]);
+ System.out.println(Arrays.toString(strr));
+ List<String> res = new ArrayList<>();
+ res.addAll(Arrays.asList(strr[0].split(".")));
+ System.out.println(res);
+ 
 
 
 

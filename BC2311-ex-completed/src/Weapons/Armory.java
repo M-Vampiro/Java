@@ -85,16 +85,19 @@ public class Armory {
 
   public String getDetails() {
     if (this instanceof Firearms) {
-    return "Weapon catagory: " + this.catagory + ". Name: " + this.name + ". Ammo: "
-        + this.ammoType.getAmmo() + ". Mag Size: " + this.magSize + ". Durabillity: " + this.durabillity + ".";
-  } else return "";
-}
+      return "Weapon catagory: " + this.catagory + ". Name: " + this.name + ". Ammo: "
+          + this.ammoType.getAmmo() + ". Mag Size: " + this.magSize + ". Durabillity: " + this.durabillity + ".";
+    } else
+      return "Weapon catagory: " + this.catagory + ". Name: " + this.name + "Range: " + this.radius + "Attack Rate: "
+          + this.attackRps + ". Durabillity: " + this.durabillity + ".";
+  }
 
   public String getStatus() {
     if (this instanceof Firearms) {
-    return "Weapon: " + this.name + ". Ammo in magazine: " + this.ammoInMag + ". Ammo backup : " + this.ammoBackup
-        + ". Durabillity: " + this.durabillity + ".";
-  } else return "";
-}
+      return "Weapon: " + this.name + ". Ammo in magazine: " + this.ammoInMag + ". Ammo backup : " + this.ammoBackup
+          + ". Durabillity: " + this.durabillity + ".";
+    } else
+      return "";
+  }
 
 }

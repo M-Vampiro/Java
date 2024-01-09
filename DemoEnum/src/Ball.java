@@ -1,10 +1,17 @@
+import Sorting.Color;
+
 public class Ball {
 
   // private String colors //
   private Color color; // relatively finite numbers
+  private Directions directions;
 
   public Ball(Color color) {
     this.color = color;
+  }
+  public Ball(Color color, Directions directions) {
+    this.color = color;
+    this.directions = directions;
 
   }
 
@@ -29,12 +36,16 @@ public class Ball {
     Ball b5 = new Ball(Color.Red);
     System.out.println(b5.getColor());
 
-
     if (b5.getColor() == b1.getColor()) {
       System.out.println("Same color");
     }
 
 
+
+
+
+    Ball t1 = new Ball(Color.Red, Directions.East);
+    System.out.println(t1.directions.opposite());
 
   }
 
