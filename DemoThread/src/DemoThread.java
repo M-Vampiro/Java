@@ -17,7 +17,7 @@ public class DemoThread {
         thread2.start(); // main thread split itself, thread is created
 
         // 1,000,000,000 lines of code ...
-        for (int i = 0; i < 1000000000 ; i++) {
+        for (int i = 0; i < 1000000000; i++) {
 
         }
 

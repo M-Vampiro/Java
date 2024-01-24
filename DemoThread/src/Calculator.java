@@ -2,9 +2,11 @@ public class Calculator {
 
   private int x;
 
-  // Multi-thread environment encounter atomic problem (read-write issue on share resource)
+  // Multi-thread environment encounter atomic problem (read-write issue on share
+  // resource)
   // One of the approaches to solve is "synchronized"
-  // When a thread accessing a "synchronized" instance method, obtain a lock from the object
+  // When a thread accessing a "synchronized" instance method, obtain a lock from
+  // the object
 
   public synchronized void increment() {
     this.x++;
@@ -97,8 +99,6 @@ public class Calculator {
 
     System.out.println("calculator.x=" + calculator.x); // 0
 
-
   }
-
 
 }

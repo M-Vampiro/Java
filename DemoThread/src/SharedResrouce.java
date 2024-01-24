@@ -10,7 +10,8 @@ public class SharedResrouce {
   // 6. Consumer thread -> get the lock -> get into "synchronized consume()"
 
   // 1. waiting thread has to be notified by someone
-  // 2. synchronized instance method can only be accessed when the thread has the key (lock)
+  // 2. synchronized instance method can only be accessed when the thread has the
+  // key (lock)
 
   public synchronized void produce() throws InterruptedException {
     while (hasData) {
@@ -70,6 +71,5 @@ public class SharedResrouce {
     consumer.start();
     System.out.println("main ends ...");
   }
-
 
 }

@@ -8,19 +8,18 @@ public class DemoWrapper {
         Integer i4 = new Integer(5);
         Integer i5 = Integer.valueOf(3);
 
-        int result = i4.compareTo(i2); //1
+        int result = i4.compareTo(i2); // 1
         System.out.println(result);
         int result2 = i2.compareTo(i4); // -1
         System.out.println(result2);
 
-        if ( i2.compareTo(i4) == 0 ) { // asking if i2 == i4
-            
+        if (i2.compareTo(i4) == 0) { // asking if i2 == i4
+
         }
 
         if (i2 == i4) { // comparing the 2 int values
-        
-        }
 
+        }
 
         // double -> Double
 
@@ -42,22 +41,9 @@ public class DemoWrapper {
         // Long - > long
         // Integer -> int
         // int <-> long
-        
+
         Integer i10 = (int) (long) l1; // int -> Integer (autobox)
         Long l2 = (long) (int) i10; // long -> Long (autobox)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

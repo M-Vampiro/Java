@@ -1,6 +1,5 @@
 public class Demo {
 
-
   public synchronized void methodA() {
     methodB();
   }
