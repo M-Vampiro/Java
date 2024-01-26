@@ -1,3 +1,5 @@
+package com.vtxlab.exercise;
+
 import java.util.HashMap;
 
 public interface FurnitureOrderInterface {

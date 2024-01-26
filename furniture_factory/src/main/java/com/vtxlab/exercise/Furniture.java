@@ -1,4 +1,4 @@
-public class Fruniture {
+package com.vtxlab.exercise;
 
   /**
    * FURNITURE_TYPE("Furniture Name", floating-point cost)
@@ -37,4 +37,3 @@ public class Fruniture {
       return this.cost;
     }
   }
-}

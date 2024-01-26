@@ -1,3 +1,5 @@
+package com.vtxlab.exercise;
+
 import java.util.HashMap;
 
 import static junit.framework.TestCase.assertEquals;

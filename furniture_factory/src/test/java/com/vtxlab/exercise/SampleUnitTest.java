@@ -1,3 +1,5 @@
+package com.vtxlab.exercise;
+
 import static junit.framework.TestCase.assertEquals;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;

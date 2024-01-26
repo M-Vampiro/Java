@@ -1,4 +1,7 @@
+package com.vtxlab.exercise;
+
 import java.util.HashMap;
+import java.util.Map;
 
 public class FurnitureOrder implements FurnitureOrderInterface {
     /**
@@ -27,21 +30,28 @@ public class FurnitureOrder implements FurnitureOrderInterface {
     public float getTotalOrderCost() {
         // TODO: Complete the method
         float sum = 0;
-        
+        for (Map.Entry<Furniture, Integer> ordersOfFurnitures : ordersOfFurnitures.entrySet()) {
+            sum += ordersOfFurnitures.getKey().cost() * ordersOfFurnitures.getValue();
+        }
+        return sum;
     }
 
     public int getTypeCount(Furniture type) {
         // TODO: Complete the method
-        return -1;
+        return ordersOfFurnitures.size() == 0 || ordersOfFurnitures.get(type) == null ? 0 : ordersOfFurnitures.get(type);
     }
 
     public float getTypeCost(Furniture type) {
         // TODO: Complete the method
-        return -1.0f;
+        return type.cost() * getTypeCount(type);
     }
 
     public int getTotalOrderQuantity() {
         // TODO: Complete the method
-        return -1;
+        int sum = 0;
+        for (Map.Entry<Furniture, Integer> ordersOfFurnitures : ordersOfFurnitures.entrySet()) {
+            sum += ordersOfFurnitures.getValue();
+        }
+        return sum;
     }
 }
