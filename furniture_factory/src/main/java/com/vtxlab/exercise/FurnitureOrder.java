@@ -38,7 +38,7 @@ public class FurnitureOrder implements FurnitureOrderInterface {
 
     public int getTypeCount(Furniture type) {
         // TODO: Complete the method
-        return ordersOfFurnitures.size() == 0 || ordersOfFurnitures.get(type) == null ? 0 : ordersOfFurnitures.get(type);
+        return ordersOfFurnitures.getOrDefault(type, 0);
     }
 
     public float getTypeCost(Furniture type) {
