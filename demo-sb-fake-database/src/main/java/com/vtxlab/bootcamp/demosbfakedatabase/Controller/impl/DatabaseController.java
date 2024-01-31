@@ -29,4 +29,29 @@ public class DatabaseController implements DatabaseOperation {
         new Cat(name, age));
   }
 
+  @Override
+  public Boolean createCat(int index, Cat cat) {
+    return catDatabaseService.createCatInStaticMemory(index, cat);
+  }
+
+  @Override
+  public Boolean deleteCat(int index) {
+    return catDatabaseService.deleteCatFromStaticMemory(index);
+  }
+
+  @Override
+  public Boolean updateCat(int index, Cat cat) {
+    return catDatabaseService.updateCatInStaticMemory(index, cat);
+  }
+
+  @Override
+  public void patchCatName(int index, String name) {
+    catDatabaseService.patchCatNameInStaticMemory(index, name);
+  }
+
+  @Override
+  public void patchCatAge(int index, int age) {
+    catDatabaseService.patchCatAgeInStaticMemory(index, age);
+  }
+
 }
